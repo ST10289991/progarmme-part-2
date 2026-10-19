@@ -39,3 +39,43 @@ log in, and then send, discard or store messages.
 3. Follow the prompts to register, log in, and send messages.
 
 To run the unit tests, right-click `MessageTest.java` and choose **Test File**.
+## Message hash
+
+The hash is made from the first two digits of the message ID, a colon, the
+message number, a colon, and the first and last words of the message in capitals.
+Example: `00:0:HITONIGHT`
+
+## Storing messages in JSON
+
+Messages are written to `storedMessages.json` using Java's `FileWriter`.
+No external library was needed. Libraries such as Gson or org.json could be used instead.
+
+## Unit tests
+
+The tests use the test data from the brief and cover:
+
+- Message length (success and failure)
+- Recipient number format (success and failure)
+- Message hash and message ID
+- Send, Disregard and Store results
+- Total number of messages sent
+
+## Notes and assumptions
+
+- The brief says the recipient number must have "no more than ten characters",
+  but the test number `+27718693002` is 12 characters long. We followed the rule
+  from the previous task (+27 followed by 9 digits) so that the test data is valid.
+- The message ID is random, so the hash test reads the first two digits of the
+  real ID instead of using a fixed value.
+- Punctuation (such as `?`) is removed from the first and last words when
+  building the hash.
+
+## Use of AI
+
+We used Claude (an AI assistant made by Anthropic) while working on this
+assignment. It was used to:
+
+- Explain the assignment steps in simple terms
+- Help draft the `Message` class, the QuickChat menu code and the unit tests
+- Check our code for errors and help fix them (for example, a misplaced
+  constructor and a missing closing brace in `MessageTest.java`)
