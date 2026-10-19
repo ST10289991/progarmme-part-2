@@ -24,3 +24,11 @@ log in, and then send, discard or store messages.
 - For each message the user can Send, Disregard or Store it to send later
 - Stored messages are saved to a JSON file (`storedMessages.json`)
 - The total number of messages sent is displayed at the end
+## Project structure
+
+| File | Purpose |
+|------|---------|
+| `Login.java` | Registration, validation and login logic |
+| `Message.java` | Message creation, ID, hash, validation, sending and JSON storage |
+| `AppChat.java` | Main program: registration, login and the QuickChat menu |
+| `MessageTest.java` | JUnit unit tests for the Message class |
