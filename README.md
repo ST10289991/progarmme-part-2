@@ -32,3 +32,10 @@ log in, and then send, discard or store messages.
 | `Message.java` | Message creation, ID, hash, validation, sending and JSON storage |
 | `AppChat.java` | Main program: registration, login and the QuickChat menu |
 | `MessageTest.java` | JUnit unit tests for the Message class |
+# How to run
+
+1. Open the project in NetBeans.
+2. Run `AppChat.java` (right-click, then Run File).
+3. Follow the prompts to register, log in, and send messages.
+
+To run the unit tests, right-click `MessageTest.java` and choose **Test File**.
